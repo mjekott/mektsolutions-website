@@ -15,6 +15,22 @@
   --color-accent: var(--accent);
 }
 
+/* Registering the marquee via @theme makes Tailwind emit the `animate-marquee`
+   utility AND keep its @keyframes (a bare @keyframes in this file gets
+   tree-shaken by Lightning CSS because nothing in-file references it). */
+@theme {
+  --animate-marquee: meMarquee 34s linear infinite;
+
+  @keyframes meMarquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 /* Tailwind's preflight (inside @layer base) already resets box-sizing and
    margins. Do NOT add an unlayered `* { margin:0; padding:0 }` reset here —
    unlayered rules outrank Tailwind's layered utilities and would silently

@@ -3,9 +3,10 @@
 import { motion } from "motion/react";
 import { CONTAINER } from "@/lib/ui";
 import { EASE } from "@/lib/motion";
-import { founder, contact } from "@/lib/data";
+import { founder } from "@/lib/data";
 import { Eyebrow } from "@/components/Eyebrow";
 import { Shot } from "@/components/Shot";
+import { CalendlyButton } from "@/components/CalendlyButton";
 
 export function Founder() {
   return (
@@ -69,9 +70,9 @@ export function Founder() {
           </div>
 
           <div className="flex items-center gap-4 mt-[30px]">
-            <a href={contact.calendly} target="_blank" rel="noopener noreferrer" className="bg-accent text-[#07110c] text-sm font-semibold px-[26px] py-3 rounded-[11px] hover:opacity-90 transition-opacity">
+            <CalendlyButton className="bg-accent text-[#07110c] text-sm font-semibold px-[26px] py-3 rounded-[11px] hover:opacity-90 transition-opacity cursor-pointer">
               Work with me
-            </a>
+            </CalendlyButton>
             <a
               href={founder.linkedin}
               target="_blank"

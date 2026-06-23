@@ -4,8 +4,8 @@ import { Fragment } from "react";
 import { motion } from "motion/react";
 import { CONTAINER } from "@/lib/ui";
 import { heroContainer, heroItem } from "@/lib/motion";
-import { contact } from "@/lib/data";
 import { Shot } from "@/components/Shot";
+import { CalendlyButton } from "@/components/CalendlyButton";
 
 const heroStats = [
   { v: "15", s: "+", label: "products shipped" },
@@ -42,9 +42,9 @@ export function Hero() {
           We partner with founders and teams across Africa to design, build, and ship digital products people actually use.
         </motion.p>
         <motion.div variants={heroItem} className="flex flex-wrap items-center gap-[18px] mt-9">
-          <a href={contact.calendly} target="_blank" rel="noopener noreferrer" className="bg-accent text-[#07110c] text-[15px] font-semibold px-[30px] py-3.5 rounded-xl hover:opacity-90 transition-opacity">
+          <CalendlyButton className="bg-accent text-[#07110c] text-[15px] font-semibold px-[30px] py-3.5 rounded-xl hover:opacity-90 transition-opacity cursor-pointer">
             Book a call
-          </a>
+          </CalendlyButton>
           <a href="#works" className="text-white/70 text-[15px] font-semibold inline-flex items-center gap-2 hover:text-white transition-colors">
             View Projects <span className="text-base">&rarr;</span>
           </a>
