@@ -15,11 +15,10 @@
   --color-accent: var(--accent);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Tailwind's preflight (inside @layer base) already resets box-sizing and
+   margins. Do NOT add an unlayered `* { margin:0; padding:0 }` reset here —
+   unlayered rules outrank Tailwind's layered utilities and would silently
+   cancel every margin/padding utility (mx-auto, px-*, p-*) across the app. */
 
 html {
   scroll-behavior: smooth;
@@ -36,14 +35,4 @@ body {
 ::selection {
   background: #fff;
   color: #07110c;
-}
-
-@keyframes meDrift {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-26px, 22px) scale(1.06);
-  }
 }
