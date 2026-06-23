@@ -19,7 +19,7 @@ type ShotProps = {
 export function Shot({ src, placeholder, fit = "cover", light = false, className, imgClassName }: ShotProps) {
   const [failed, setFailed] = useState(false);
   return (
-    <div className={`relative overflow-hidden ${light ? "bg-[#f4f4f3]" : "bg-[#121e17]"} ${className ?? ""}`}>
+    <div className={`relative overflow-hidden ${light ? "bg-[#f4f4f3]" : "bg-[#262423]"} ${className ?? ""}`}>
       {!failed ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -30,10 +30,10 @@ export function Shot({ src, placeholder, fit = "cover", light = false, className
         />
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
-          <span className={`text-[11px] font-semibold tracking-[0.14em] uppercase ${light ? "text-[#07110c]/45" : "text-white/40"}`}>
+          <span className={`text-[11px] font-semibold tracking-[0.14em] uppercase ${light ? "text-[#1b1a18]/45" : "text-white/40"}`}>
             Preview
           </span>
-          <span className={`text-sm leading-normal max-w-[280px] ${light ? "text-[#07110c]/60" : "text-white/55"}`}>
+          <span className={`text-sm leading-normal max-w-[280px] ${light ? "text-[#1b1a18]/60" : "text-white/55"}`}>
             {placeholder}
           </span>
         </div>

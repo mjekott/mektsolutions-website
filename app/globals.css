@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07110c;
+  --background: #1b1a18;
   --foreground: #f4f4f3;
   --accent: #16b57f;
-  --card-bg: #0c150f;
+  --card-bg: #211f1d;
   --card-border: rgba(255, 255, 255, 0.07);
   --muted: rgba(255, 255, 255, 0.5);
 }
@@ -50,5 +50,77 @@ body {
 
 ::selection {
   background: #fff;
-  color: #07110c;
+  color: #1b1a18;
+}
+
+/* ---- hero illustration animations ----
+   The `.me-anim-keep` rule references every keyframe name so Lightning CSS
+   keeps them (bare keyframes only used via inline `animation:` in JSX would be
+   tree-shaken). The class itself is never applied. */
+.me-anim-keep {
+  animation-name: meFloatA, meFloatC, meReveal, meAreaIn, meDraw, meSkel,
+    meShimmer, meBookA, meBookB, meTapB, meCheckB, mePulse, meEq;
+}
+
+@keyframes meEq {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes meFloatA {
+  0%, 100% { transform: rotate(-1.5deg) translateY(0); }
+  50% { transform: rotate(-1.5deg) translateY(-12px); }
+}
+@keyframes meFloatC {
+  0%, 100% { transform: rotate(4deg) translateY(0); }
+  50% { transform: rotate(4deg) translateY(-14px); }
+}
+@keyframes meReveal {
+  0%, 14% { opacity: 0; }
+  21%, 96% { opacity: 1; }
+  99%, 100% { opacity: 0; }
+}
+@keyframes meAreaIn {
+  0%, 24% { opacity: 0; }
+  42%, 96% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes meDraw {
+  0%, 19% { stroke-dashoffset: 560; }
+  40%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes meSkel {
+  0%, 12% { opacity: 1; }
+  19%, 97% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes meShimmer {
+  0% { background-position: -160px 0; }
+  100% { background-position: 240px 0; }
+}
+@keyframes meBookA {
+  0%, 2% { opacity: 1; }
+  57% { opacity: 1; }
+  63% { opacity: 0; }
+  95% { opacity: 0; }
+  99%, 100% { opacity: 1; }
+}
+@keyframes meBookB {
+  0%, 59% { opacity: 0; }
+  66% { opacity: 1; }
+  93% { opacity: 1; }
+  97%, 100% { opacity: 0; }
+}
+@keyframes meTapB {
+  0%, 44% { transform: scale(1); }
+  50% { transform: scale(0.95); filter: brightness(1.15); }
+  56%, 100% { transform: scale(1); }
+}
+@keyframes meCheckB {
+  0%, 66% { stroke-dashoffset: 24; }
+  78%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes mePulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(22, 181, 127, 0.5); }
+  50% { opacity: 0.5; box-shadow: 0 0 0 4px rgba(22, 181, 127, 0); }
 }

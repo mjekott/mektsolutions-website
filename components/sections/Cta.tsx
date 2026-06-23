@@ -23,7 +23,7 @@ export function Cta() {
           Tell us what you&apos;re building. Book a free 30-minute call and we&apos;ll come back with a plan.
         </motion.p>
         <motion.div variants={revealItem} className="mt-9">
-          <CalendlyButton className="inline-block bg-accent text-[#07110c] text-[15px] font-semibold px-9 py-[15px] rounded-xl hover:opacity-90 transition-opacity cursor-pointer">
+          <CalendlyButton className="inline-block bg-accent text-[#1b1a18] text-[15px] font-semibold px-9 py-[15px] rounded-xl hover:opacity-90 transition-opacity cursor-pointer">
             Book a call
           </CalendlyButton>
         </motion.div>

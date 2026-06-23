@@ -15,8 +15,8 @@ export function SelectedWorks() {
       cards={({ x, vw, enabled, offsets }) =>
         projects.map((p, i) => (
           <GalleryCard key={p.slotId} x={x} vw={vw} enabled={enabled} dim={false} offset={offsets[i]} widthClass="w-full">
-            <div className="p-[22px] grid grid-cols-1 md:grid-cols-2 gap-7 h-full">
-              <Shot src={p.src} placeholder={p.shot} fit="cover" className="w-full h-full min-h-[240px] md:min-h-[440px] rounded-2xl" />
+            <div className="p-[22px] grid grid-cols-1 md:grid-cols-2 gap-7 items-center">
+              <Shot src={p.src} placeholder={p.shot} fit="cover" className="w-full aspect-[16/10] rounded-2xl" />
               <div className="py-3.5 md:pl-1.5 flex flex-col">
                 <div className="flex items-center gap-3">
                   <span className="text-xl font-bold tracking-[-0.02em]">{p.brand}</span>
@@ -24,6 +24,10 @@ export function SelectedWorks() {
                 </div>
                 <h3 className="text-[22px] md:text-[25px] leading-[1.18] tracking-[-0.025em] font-semibold mt-3.5">{p.headline}</h3>
                 <p className="text-[14.5px] leading-[1.55] text-white/50 mt-3.5">{p.overview}</p>
+                <div className="flex items-baseline gap-3 mt-[18px] px-4 py-3.5 bg-[#252322] border border-white/[0.07] rounded-[14px]">
+                  <span className="text-[30px] font-bold tracking-[-0.04em] text-accent leading-none">{p.metric}</span>
+                  <span className="text-[13px] leading-[1.35] text-white/55">{p.metricLabel}</span>
+                </div>
                 <div className="flex flex-col gap-[11px] mt-5">
                   {p.bullets.map((b, bi) => (
                     <div key={bi} className="flex items-start gap-[11px]">
@@ -40,7 +44,7 @@ export function SelectedWorks() {
                 <a
                   href={p.url ?? "#contact"}
                   {...(p.url ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="mt-[22px] self-start inline-flex items-center gap-2 bg-[#142018] border border-white/[0.12] text-[#f4f4f3] text-[13.5px] font-semibold px-[22px] py-[11px] rounded-[10px] hover:bg-[#1a2a20] transition-colors"
+                  className="mt-[22px] self-start inline-flex items-center gap-2 bg-[#2b2927] border border-white/[0.12] text-[#f4f4f3] text-[13.5px] font-semibold px-[22px] py-[11px] rounded-[10px] hover:bg-[#2b2927] transition-colors"
                 >
                   View Project
                   <span aria-hidden className="text-[15px] -mt-px">&#8599;</span>

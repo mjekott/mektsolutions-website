@@ -10,6 +10,8 @@ export type Project = {
   shot: string;
   headline: string;
   overview: string;
+  metric: string;
+  metricLabel: string;
   bullets: string[];
   tags: string[];
   url?: string;
@@ -23,6 +25,8 @@ export const projects: Project[] = [
     year: "2025",
     shot: "product shot — global payments platform",
     headline: "Simplifying global payments for businesses",
+    metric: "1,000+",
+    metricLabel: "businesses moving money across borders",
     overview:
       "An enterprise FX platform trusted by 1,000+ businesses to move money across borders.",
     bullets: [
@@ -41,6 +45,8 @@ export const projects: Project[] = [
     year: "2024",
     shot: "product shot — cross-border trade dashboard",
     headline: "Cross-border infrastructure for African trade",
+    metric: "5+",
+    metricLabel: "markets connected across the continent",
     overview: "A cross-border payments platform connecting Africa to global markets.",
     bullets: [
       "Multi-step money transfer flows with validations and success handling",
@@ -58,6 +64,8 @@ export const projects: Project[] = [
     year: "2024",
     shot: "product shot — Soft POS & payments platform",
     headline: "The modern way to manage finances",
+    metric: "Days",
+    metricLabel: "to onboard a new business — not months",
     overview: "A Soft POS and payments platform built for multi-business operations.",
     bullets: [
       "One Platform — multiple businesses, one shared core",
@@ -75,6 +83,8 @@ export const projects: Project[] = [
     year: "2023",
     shot: "product shot — elderly care platform",
     headline: "Better health for your parents, made simple",
+    metric: "24/7",
+    metricLabel: "remote access to doctors and care",
     overview: "An integrated healthcare platform for elderly care and remote monitoring.",
     bullets: [
       "Telemedicine & Care Access — doctors, pharmacists, and specialists from anywhere",
@@ -201,7 +211,7 @@ export const founder = {
     { label: "CEO, MEKT Solutions", accent: true },
     { label: "Full-Stack Engineer", accent: false },
   ],
-  bio: "I've spent the last several years building and leading the engineering behind some of Africa's most demanding fintech and health products — from payment rails to remote care. At MEKT, I bring that same hands-on, ship-it-right standard to every team we partner with.",
+  bio: "Mfonobong John Ekott has spent the last several years building and leading the engineering behind some of Africa's most demanding fintech and health products, from payment infrastructure to remote healthcare solutions. At MEKT, he brings that same commitment to excellence, practical leadership, and high quality execution to every team the company partners with.",
   ledProjects: ["TranzyPay", "Betaling", "RockBalm Health", "Nearpays"],
   linkedin: "https://www.linkedin.com/in/mjekott",
 } as const;
@@ -223,19 +233,44 @@ export const contact = {
 
 export const clients = ["TranzyPay", "Betaling", "Nearpays", "RockBalm", "Jacko", "Bonivo", "Fresh2Cart"];
 
+export const heroWords = ["money", "people", "businesses", "markets", "industries"];
+
+export type Diagnostic = { kicker: string; title: string; desc: string; cta: string };
+
+export const diagnostics: Diagnostic[] = [
+  {
+    kicker: "Free · 30 min",
+    title: "Product Audit",
+    desc: "Send us your app or codebase. We'll review the UX, architecture, and what's slowing you down — and tell you straight.",
+    cta: "Book an audit",
+  },
+  {
+    kicker: "Phase Zero",
+    title: "Scoping Session",
+    desc: "Not sure what to build first? We'll pressure-test the idea and map the smallest version worth shipping.",
+    cta: "Map it with us",
+  },
+  {
+    kicker: "Health Check",
+    title: "Tech Review",
+    desc: "Engineering delays you can't explain? We'll ask the right questions and surface the real bottlenecks.",
+    cta: "Get a review",
+  },
+];
+
 export type Testimonial = { quote: string; name: string; role: string; initials: string };
 
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "We were building for families caring for elderly parents — sensitive, high-stakes work. MEKT handled telemedicine, care plans, and lab results with a reliability that earned our users' trust from day one.",
-    name: "Idongesit Umoh",
+      "Families relied on our platform to care for aging parents, making every interaction a matter of trust. MEKT built and delivered telemedicine, care planning, and lab result systems with the reliability and attention to detail that users could depend on from day one.",
+    name: "Idongesit Udombana",
     role: "CEO, RockBalm Health",
     initials: "IU",
   },
   {
     quote:
-      "The multi-step transfer flows and approval systems MEKT built are the backbone of our platform. They thought through every edge case — validation, audit trails, reconciliation — so our team could move fast without breaking things.",
+      "From day one, MEKT acted as more than a development partner; they became a strategic extension of our team. They built our entire cross-border payments platform, worked directly with banking partners on our behalf, and delivered the robust infrastructure needed to support secure, compliant, and reliable international payments at scale.",
     name: "Oluwatosin Adeyemi",
     role: "Product Manager, TranzyPay",
     initials: "OA",
