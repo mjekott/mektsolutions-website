@@ -3,8 +3,8 @@
 import { motion } from "motion/react";
 import { CONTAINER } from "@/lib/ui";
 import { revealContainer, revealItem } from "@/lib/motion";
-import { contact } from "@/lib/data";
 import { Eyebrow } from "@/components/Eyebrow";
+import { CalendlyButton } from "@/components/CalendlyButton";
 
 export function Cta() {
   return (
@@ -22,9 +22,11 @@ export function Cta() {
         <motion.p variants={revealItem} className="text-[17px] text-white/50 mt-6 max-w-[480px]">
           Tell us what you&apos;re building. Book a free 30-minute call and we&apos;ll come back with a plan.
         </motion.p>
-        <motion.a variants={revealItem} href={contact.calendly} target="_blank" rel="noopener noreferrer" className="inline-block mt-9 bg-accent text-[#07110c] text-[15px] font-semibold px-9 py-[15px] rounded-xl hover:opacity-90 transition-opacity">
-          Book a call
-        </motion.a>
+        <motion.div variants={revealItem} className="mt-9">
+          <CalendlyButton className="inline-block bg-accent text-[#07110c] text-[15px] font-semibold px-9 py-[15px] rounded-xl hover:opacity-90 transition-opacity cursor-pointer">
+            Book a call
+          </CalendlyButton>
+        </motion.div>
       </motion.div>
     </section>
   );
