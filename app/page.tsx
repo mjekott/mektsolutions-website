@@ -1,5 +1,5 @@
 import { AmbientGlow } from "@/components/AmbientGlow";
-import { BackgroundMusic } from "@/components/BackgroundMusic";
+// import { BackgroundMusic } from "@/components/BackgroundMusic";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { TrustedBy } from "@/components/sections/TrustedBy";
@@ -21,7 +21,7 @@ export default function Home() {
     // scroll container, which would break the galleries' sticky pinning.
     <div className="relative w-full overflow-x-clip bg-[#1b1a18] text-[#f4f4f3] tracking-[-0.01em]">
       <AmbientGlow />
-      <BackgroundMusic />
+      {/* <BackgroundMusic /> */}
       <Navbar />
       <Hero />
       <TrustedBy />

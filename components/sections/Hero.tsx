@@ -1,11 +1,11 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { CONTAINER } from "@/lib/ui";
-import { heroContainer, heroItem } from "@/lib/motion";
-import { heroWords } from "@/lib/data";
 import { CalendlyButton } from "@/components/CalendlyButton";
+import { heroWords } from "@/lib/data";
+import { heroContainer, heroItem } from "@/lib/motion";
+import { CONTAINER } from "@/lib/ui";
+import { AnimatePresence, motion } from "motion/react";
+import { Fragment, useEffect, useState } from "react";
 
 const heroStats = [
   { v: "15", s: "+", label: "products shipped" },
@@ -129,29 +129,52 @@ export function Hero() {
       variants={heroContainer}
       initial="hidden"
       animate="show"
-      className={`relative ${CONTAINER} pt-[140px] md:pt-[150px] pb-[80px] md:pb-24 grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-10 items-center`}
+      className={`relative ${CONTAINER} pt-15 md:pt-37.5 pb-20 md:pb-24 grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-10 items-center`}
     >
       {/* ---- left: copy ---- */}
-      <div className="relative z-[1] max-w-[600px]">
-        <motion.div variants={heroItem} className="inline-flex items-center gap-2.5 bg-[#262423] border border-white/[0.09] rounded-full pl-1.5 pr-3.5 py-1.5 text-[13px] font-medium">
-          <span className="bg-accent text-[#1b1a18] font-bold text-[11px] tracking-[0.04em] px-[9px] py-[3px] rounded-full">BEST</span>
-          <span className="text-white/[0.78]">Product Design &amp; Engineering Agency</span>
+      <div className="relative z-[1] max-w-150">
+        <motion.div
+          variants={heroItem}
+          className="inline-flex items-center gap-2.5 bg-[#262423] border border-white/[0.09] rounded-full pl-1.5 pr-3.5 py-1.5 text-[13px] font-medium"
+        >
+          <span className="bg-accent text-[#1b1a18] font-bold text-[11px] tracking-[0.04em] px-[9px] py-[3px] rounded-full">
+            BEST
+          </span>
+          <span className="text-white/[0.78]">
+            Product Design &amp; Engineering Agency
+          </span>
         </motion.div>
-        <motion.h1 variants={heroItem} className="text-[42px] sm:text-[54px] lg:text-[66px] leading-[1.02] tracking-[-0.045em] font-semibold mt-7">
+        <motion.h1
+          variants={heroItem}
+          className="text-[42px] sm:text-[54px] lg:text-[66px] leading-[1.02] tracking-[-0.045em] font-semibold mt-7"
+        >
           Products that move <RotatingWord />
         </motion.h1>
-        <motion.p variants={heroItem} className="text-[17px] md:text-[18px] leading-[1.55] text-white/55 max-w-[500px] mt-[26px]">
-          We partner with founders and teams across Africa to design, build, and ship digital products people actually use.
+        <motion.p
+          variants={heroItem}
+          className="text-[17px] md:text-[18px] leading-[1.55] text-white/55 max-w-[500px] mt-[26px]"
+        >
+          We partner with founders and teams across Africa to design, build, and
+          ship digital products people actually use.
         </motion.p>
-        <motion.div variants={heroItem} className="flex flex-wrap items-center gap-[18px] mt-9">
+        <motion.div
+          variants={heroItem}
+          className="flex flex-wrap items-center gap-[18px] mt-9"
+        >
           <CalendlyButton className="bg-accent text-[#1b1a18] text-[15px] font-semibold px-[30px] py-3.5 rounded-xl hover:opacity-90 transition-opacity cursor-pointer">
             Book a call
           </CalendlyButton>
-          <a href="#works" className="text-white/70 text-[15px] font-semibold inline-flex items-center gap-2 hover:text-white transition-colors">
+          <a
+            href="#works"
+            className="text-white/70 text-[15px] font-semibold inline-flex items-center gap-2 hover:text-white transition-colors"
+          >
             View Projects <span className="text-base">&rarr;</span>
           </a>
         </motion.div>
-        <motion.div variants={heroItem} className="flex items-center gap-[34px] mt-11">
+        <motion.div
+          variants={heroItem}
+          className="flex items-center gap-[34px] mt-11"
+        >
           {heroStats.map((st, i) => (
             <Fragment key={st.label}>
               {i > 0 && <span className="w-px h-10 bg-white/10" aria-hidden />}
@@ -160,7 +183,9 @@ export function Hero() {
                   {st.v}
                   <span className="text-accent">{st.s}</span>
                 </div>
-                <div className="text-[13px] text-white/45 mt-1.5">{st.label}</div>
+                <div className="text-[13px] text-white/45 mt-1.5">
+                  {st.label}
+                </div>
               </div>
             </Fragment>
           ))}
