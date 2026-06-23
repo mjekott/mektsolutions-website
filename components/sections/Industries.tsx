@@ -21,13 +21,13 @@ export function Industries() {
           <motion.span
             key={ind}
             variants={revealItem}
-            className="text-[15px] font-medium text-white/[0.78] bg-[#0e1710] border border-white/[0.09] rounded-full px-[22px] py-[11px]"
+            className="text-[15px] font-medium text-white/[0.78] bg-[#252322] border border-white/[0.09] rounded-full px-[22px] py-[11px]"
           >
             {ind}
           </motion.span>
         ))}
       </motion.div>
-      <a href="#contact" className="inline-block mt-9 bg-[#142018] border border-white/[0.12] text-[#f4f4f3] text-sm font-semibold px-7 py-3 rounded-xl hover:bg-[#1a2a20] transition-colors">
+      <a href="#contact" className="inline-block mt-9 bg-[#2b2927] border border-white/[0.12] text-[#f4f4f3] text-sm font-semibold px-7 py-3 rounded-xl hover:bg-[#2b2927] transition-colors">
         View all
       </a>
     </section>

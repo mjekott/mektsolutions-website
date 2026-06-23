@@ -32,14 +32,14 @@ export function WhoWeAre() {
         initial="hidden"
         whileInView="show"
         viewport={viewport}
-        className="grid grid-cols-2 gap-4 border border-white/[0.09] rounded-[22px] p-4 bg-[#0b140e]"
+        className="grid grid-cols-2 gap-4 border border-white/[0.09] rounded-[22px] p-4 bg-[#211f1d]"
       >
         {stats.map((st, i) => (
           <motion.div
             key={i}
             variants={revealItem}
             className={`rounded-2xl px-6 py-9 md:px-9 md:py-10 min-h-[160px] md:min-h-[200px] flex flex-col justify-center items-center text-center ${
-              st.solid ? "bg-[#142018]" : "bg-[#0d1610] border border-white/[0.04]"
+              st.solid ? "bg-[#2b2927]" : "bg-[#252322] border border-white/[0.04]"
             }`}
           >
             <div className="text-[44px] md:text-[56px] font-semibold tracking-[-0.04em] leading-none">

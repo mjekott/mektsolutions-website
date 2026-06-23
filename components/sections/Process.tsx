@@ -27,7 +27,7 @@ export function Process() {
             concept to go-live
           </span>
         </div>
-        <a href="#contact" className="inline-block mt-[34px] bg-[#f4f4f3] text-[#07110c] text-sm font-semibold px-7 py-3.5 rounded-xl hover:opacity-90 transition-opacity">
+        <a href="#contact" className="inline-block mt-[34px] bg-[#f4f4f3] text-[#1b1a18] text-sm font-semibold px-7 py-3.5 rounded-xl hover:opacity-90 transition-opacity">
           Start a project
         </a>
       </div>
@@ -37,7 +37,7 @@ export function Process() {
         <motion.div variants={revealContainer} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.05 }}>
           {steps.map((st) => (
             <motion.div key={st.no} variants={revealItem} className="flex gap-6 pb-[30px] relative">
-              <div className="w-11 h-11 rounded-full bg-[#0c150f] border border-white/[0.14] flex-none flex items-center justify-center text-sm font-semibold text-white/70 tabular-nums relative z-[1]">
+              <div className="w-11 h-11 rounded-full bg-[#211f1d] border border-white/[0.14] flex-none flex items-center justify-center text-sm font-semibold text-white/70 tabular-nums relative z-[1]">
                 {st.no}
               </div>
               <div className="pt-0.5">
@@ -47,10 +47,10 @@ export function Process() {
             </motion.div>
           ))}
           <motion.div variants={revealItem} className="flex gap-6 relative">
-            <div className="w-11 h-11 rounded-full bg-accent flex-none flex items-center justify-center text-sm font-bold text-[#07110c] tabular-nums relative z-[1]">
+            <div className="w-11 h-11 rounded-full bg-accent flex-none flex items-center justify-center text-sm font-bold text-[#1b1a18] tabular-nums relative z-[1]">
               10
             </div>
-            <div className="bg-[#0c150f] border border-white/[0.08] rounded-[18px] px-[26px] py-[22px] flex-1">
+            <div className="bg-[#211f1d] border border-white/[0.08] rounded-[18px] px-[26px] py-[22px] flex-1">
               <h3 className="text-[26px] font-semibold tracking-[-0.03em]">
                 Go-Live <span className="italic text-white/50">&amp; iterate</span>
               </h3>

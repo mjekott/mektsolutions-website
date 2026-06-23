@@ -57,7 +57,7 @@ export function GalleryCard({
   return (
     <motion.div
       style={enabled && dim ? { opacity, scale, transformOrigin: "left center" } : undefined}
-      className={`snap-start flex-none ${widthClass} bg-[#0c150f] border border-white/[0.07] rounded-3xl`}
+      className={`snap-start flex-none ${widthClass} bg-[#211f1d] border border-white/[0.07] rounded-3xl`}
     >
       {children}
     </motion.div>
@@ -178,7 +178,7 @@ export function HGallery({ id, eyebrow, title, widths, cards }: HGalleryProps) {
           {/* mobile swipe affordance */}
           <div className="md:hidden flex items-center gap-2 pb-1 text-xs font-medium text-accent">
             <span className="tabular-nums text-white/40">{String(n).padStart(2, "0")} cards</span>
-            <span className="inline-flex items-center gap-1.5 bg-[#142018] border border-white/[0.1] rounded-full px-3 py-1.5">
+            <span className="inline-flex items-center gap-1.5 bg-[#2b2927] border border-white/[0.1] rounded-full px-3 py-1.5">
               Swipe
               <motion.span
                 animate={{ x: [0, 5, 0] }}
@@ -202,7 +202,7 @@ export function HGallery({ id, eyebrow, title, widths, cards }: HGalleryProps) {
           <motion.div
             ref={trackRef}
             style={enabled ? { x } : undefined}
-            className="flex gap-6 items-stretch will-change-transform"
+            className="flex gap-6 items-stretch md:items-center will-change-transform"
           >
             {cards({ x, vw, enabled, offsets })}
           </motion.div>

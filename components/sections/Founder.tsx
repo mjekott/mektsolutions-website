@@ -16,7 +16,7 @@ export function Founder() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: EASE }}
-        className="group relative overflow-hidden bg-[#0c150f] border border-white/[0.07] rounded-[28px] p-5 grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-8 lg:gap-11 items-stretch"
+        className="group relative overflow-hidden bg-[#211f1d] border border-white/[0.07] rounded-[28px] p-5 grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] gap-8 lg:gap-11 items-stretch"
       >
         {/* accent glow */}
         <div className="pointer-events-none absolute -top-20 -left-16 w-[380px] h-[380px] bg-[radial-gradient(circle_at_30%_30%,color-mix(in_srgb,var(--accent)_24%,transparent),transparent_64%)]" />
@@ -47,7 +47,7 @@ export function Founder() {
               ) : (
                 <span
                   key={r.label}
-                  className="text-[13px] font-medium text-white/70 bg-[#142018] border border-white/[0.08] rounded-full px-3.5 py-1.5"
+                  className="text-[13px] font-medium text-white/70 bg-[#2b2927] border border-white/[0.08] rounded-full px-3.5 py-1.5"
                 >
                   {r.label}
                 </span>
@@ -61,7 +61,7 @@ export function Founder() {
             <div className="text-xs uppercase tracking-[0.08em] text-white/35 mb-3.5">Lead Engineer on</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-[520px]">
               {founder.ledProjects.map((name) => (
-                <div key={name} className="flex items-center gap-[11px] bg-[#0e1710] border border-white/[0.07] rounded-xl px-4 py-3">
+                <div key={name} className="flex items-center gap-[11px] bg-[#252322] border border-white/[0.07] rounded-xl px-4 py-3">
                   <span className="w-[7px] h-[7px] rounded-full bg-accent flex-none" />
                   <span className="text-[14.5px] font-semibold">{name}</span>
                 </div>
@@ -70,7 +70,7 @@ export function Founder() {
           </div>
 
           <div className="flex items-center gap-4 mt-[30px]">
-            <CalendlyButton className="bg-accent text-[#07110c] text-sm font-semibold px-[26px] py-3 rounded-[11px] hover:opacity-90 transition-opacity cursor-pointer">
+            <CalendlyButton className="bg-accent text-[#1b1a18] text-sm font-semibold px-[26px] py-3 rounded-[11px] hover:opacity-90 transition-opacity cursor-pointer">
               Work with me
             </CalendlyButton>
             <a

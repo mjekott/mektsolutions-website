@@ -24,14 +24,14 @@ export function Testimonials() {
           <motion.figure
             key={t.name}
             variants={revealItem}
-            className="bg-[#0c150f] border border-white/[0.07] rounded-[20px] p-[30px] flex flex-col"
+            className="bg-[#211f1d] border border-white/[0.07] rounded-[20px] p-[30px] flex flex-col"
           >
             <div className="text-[34px] leading-none text-accent font-bold" aria-hidden>
               &ldquo;
             </div>
             <blockquote className="text-[15.5px] leading-[1.6] text-white/[0.78] mt-2 flex-1">{t.quote}</blockquote>
             <figcaption className="flex items-center gap-3 mt-6 pt-[22px] border-t border-white/[0.07]">
-              <span className="w-[42px] h-[42px] rounded-full bg-[#142018] border border-white/10 flex items-center justify-center text-[15px] font-bold text-accent flex-none">
+              <span className="w-[42px] h-[42px] rounded-full bg-[#2b2927] border border-white/10 flex items-center justify-center text-[15px] font-bold text-accent flex-none">
                 {t.initials}
               </span>
               <span>
