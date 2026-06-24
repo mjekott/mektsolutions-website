@@ -67,7 +67,7 @@ export function Hero() {
         variants={heroItem}
         className="relative z-[1] text-[46px] sm:text-[68px] lg:text-[88px] xl:text-[104px] leading-[0.94] tracking-[-0.052em] font-bold mt-[30px] max-w-[1000px]"
       >
-        Products that move <RotatingWord />
+        We build products that move <RotatingWord />
       </motion.h1>
 
       <motion.p
