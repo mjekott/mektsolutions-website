@@ -13,7 +13,7 @@ export function Diagnostics() {
       <div className="text-center flex flex-col items-center">
         <Eyebrow center>Start small</Eyebrow>
         <h2 className="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.04em] font-semibold mt-[22px]">
-          Not ready to commit? <span className="text-white/40">Start with a question.</span>
+          Not ready to commit? <span className="text-accent">Start with a question.</span>
         </h2>
         <p className="text-base text-white/50 mt-[18px] max-w-[540px]">
           Low-commitment ways to get real answers about your product before a full build.
