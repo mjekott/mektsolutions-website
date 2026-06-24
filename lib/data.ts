@@ -141,37 +141,89 @@ export const uiDesigns: UiDesign[] = [
   },
 ];
 
+export type ServiceIcon = "design" | "web" | "mobile" | "backend" | "fintech" | "strategy";
+
 export type Service = {
-  no: string;
+  icon: ServiceIcon;
+  /** Per-card accent colour (icon tile + hover border). */
+  color: string;
   title: string;
   desc: string;
-  skills: string[];
+  features: string[];
 };
 
 export const services: Service[] = [
   {
-    no: "01",
+    icon: "design",
+    color: "#16b57f",
     title: "Product Design",
     desc: "Research, UX, and interface design that turns ambiguity into shippable specs.",
-    skills: ["UX research", "Design systems", "End-to-end flows for web & mobile"],
+    features: [
+      "User & product research",
+      "End-to-end UX flows",
+      "Design systems & components",
+      "Web & mobile interfaces",
+    ],
   },
   {
-    no: "02",
+    icon: "web",
+    color: "#38bdf8",
     title: "Web Engineering",
     desc: "Fast, accessible web apps built on modern, maintainable stacks.",
-    skills: ["Next.js", "React", "Admin portals", "Dashboards", "Marketing sites"],
+    features: [
+      "Production web applications",
+      "Admin portals & dashboards",
+      "Marketing & web platforms",
+      "Performance & accessibility",
+    ],
   },
   {
-    no: "03",
+    icon: "mobile",
+    color: "#a78bfa",
     title: "Mobile Apps",
-    desc: "Native-quality iOS and Android products from one focused codebase.",
-    skills: ["React Native", "Expo — biometrics, push, liveness, offline-first"],
+    desc: "Native-quality iOS and Android from one focused codebase.",
+    features: [
+      "Cross-platform mobile apps",
+      "Biometrics & liveness",
+      "Push & offline-first",
+      "App Store & Play delivery",
+    ],
   },
   {
-    no: "04",
-    title: "Backend & Infra",
+    icon: "backend",
+    color: "#6f7bf7",
+    title: "Backend & Infrastructure",
     desc: "Reliable, secure services and integrations that scale with you.",
-    skills: ["NestJS", "PostgreSQL", "Multi-tenant architectures", "Webhooks", "Queues"],
+    features: [
+      "Secure, scalable APIs",
+      "Multi-tenant architecture",
+      "Webhooks, queues & jobs",
+      "Cloud deploy & CI/CD",
+    ],
+  },
+  {
+    icon: "fintech",
+    color: "#e8a13a",
+    title: "Fintech & Payments",
+    desc: "Payment rails, wallets, and reconciliation engineered for trust at scale.",
+    features: [
+      "Transfers & settlements",
+      "Virtual accounts & wallets",
+      "Reconciliation & statements",
+      "Soft POS & provider integrations",
+    ],
+  },
+  {
+    icon: "strategy",
+    color: "#ef6e85",
+    title: "Product Strategy & Advisory",
+    desc: "Pressure-test the idea, scope the build, and de-risk delivery.",
+    features: [
+      "Product & UX audits",
+      "Scoping & roadmaps",
+      "Architecture reviews",
+      "Technical due diligence",
+    ],
   },
 ];
 
@@ -190,18 +242,18 @@ export const industries: string[] = [
   "Productivity",
 ];
 
-export type Step = { no: string; title: string; desc: string };
+export type Step = { no: string; title: string; phase: string; desc: string };
 
 export const steps: Step[] = [
-  { no: "01", title: "Project Intake", desc: "We scope the problem, goals, and constraints with you." },
-  { no: "02", title: "Team Forming", desc: "A senior squad is assembled around your product." },
-  { no: "03", title: "Discovery", desc: "Research and definition to de-risk the build." },
-  { no: "04", title: "Roadmap", desc: "A clear, milestone-based plan everyone signs off on." },
-  { no: "05", title: "Design & Build", desc: "Tight design–engineering loops, shipping every week." },
-  { no: "06", title: "Deployment", desc: "Continuous delivery to staging and production." },
-  { no: "07", title: "Data Migration", desc: "Safe, validated moves from legacy systems." },
-  { no: "08", title: "QA & Assessment", desc: "Testing, audits, and a post-launch readiness plan." },
-  { no: "09", title: "24/7 Support", desc: "Tier-level monitoring and bug fixes around the clock." },
+  { no: "01", title: "Project Intake", phase: "Kickoff", desc: "We scope the problem, goals, and constraints with you." },
+  { no: "02", title: "Team Forming", phase: "Kickoff", desc: "A senior squad is assembled around your product." },
+  { no: "03", title: "Discovery", phase: "Discovery", desc: "Research and definition to de-risk the build." },
+  { no: "04", title: "Roadmap", phase: "Planning", desc: "A clear, milestone-based plan everyone signs off on." },
+  { no: "05", title: "Design & Build", phase: "Build", desc: "Tight design–engineering loops, shipping every week." },
+  { no: "06", title: "Deployment", phase: "Build", desc: "Continuous delivery to staging and production." },
+  { no: "07", title: "Data Migration", phase: "Migration", desc: "Safe, validated moves from legacy systems." },
+  { no: "08", title: "QA & Assessment", phase: "Assurance", desc: "Testing, audits, and a post-launch readiness plan." },
+  { no: "09", title: "24/7 Support", phase: "Operate", desc: "Tier-level monitoring and bug fixes around the clock." },
 ];
 
 export const founder = {
@@ -210,8 +262,9 @@ export const founder = {
   roles: [
     { label: "CEO, MEKT Solutions", accent: true },
     { label: "Full-Stack Engineer", accent: false },
+    { label: "7+ Years Experience", accent: false },
   ],
-  bio: "Mfonobong John Ekott has spent the last several years building and leading the engineering behind some of Africa's most demanding fintech and health products, from payment infrastructure to remote healthcare solutions. At MEKT, he brings that same commitment to excellence, practical leadership, and high quality execution to every team the company partners with.",
+  bio: "Mfonobong John Ekott has spent 7+ years building and leading the engineering behind some of Africa's most demanding fintech and health products, from payment infrastructure to remote healthcare solutions. At MEKT, he brings that same commitment to excellence, practical leadership, and high quality execution to every team the company partners with.",
   ledProjects: ["TranzyPay", "Betaling", "RockBalm Health", "Nearpays"],
   linkedin: "https://www.linkedin.com/in/mjekott",
 } as const;

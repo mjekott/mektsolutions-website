@@ -11,7 +11,7 @@ export function Industries() {
     <section id="industries" className={`${CONTAINER} pt-[70px] md:pt-[90px] pb-[60px] text-center flex flex-col items-center`}>
       <Eyebrow center>Industries</Eyebrow>
       <h2 className="text-[34px] md:text-[44px] leading-[1.1] tracking-[-0.04em] font-semibold mt-[22px]">
-        Industries we serve <span className="text-white/40">across Africa</span>
+        Industries we serve <span className="text-accent">across Africa</span>
       </h2>
       <p className="text-base text-white/50 mt-[18px] max-w-[520px]">
         We deliver across sectors and across regions — from fintech to government, Lagos to London.

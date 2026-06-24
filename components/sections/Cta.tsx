@@ -17,7 +17,7 @@ export function Cta() {
         <motion.h2 variants={revealItem} className="text-[42px] md:text-[64px] leading-[1.05] tracking-[-0.045em] font-semibold mt-[26px]">
           Have a product in mind?
           <br />
-          <span className="text-white/40">Let&apos;s ship it.</span>
+          <span className="text-accent">Let&apos;s ship it.</span>
         </motion.h2>
         <motion.p variants={revealItem} className="text-[17px] text-white/50 mt-6 max-w-[480px]">
           Tell us what you&apos;re building. Book a free 30-minute call and we&apos;ll come back with a plan.

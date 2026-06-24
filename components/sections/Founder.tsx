@@ -26,7 +26,7 @@ export function Founder() {
           placeholder="Founder photo"
           fit="cover"
           className="relative z-[1] w-full min-h-[320px] lg:min-h-[440px] rounded-[22px]"
-          imgClassName="object-top [filter:grayscale(1)_contrast(1.04)_brightness(0.97)] transition-[filter] duration-500 group-hover:[filter:none]"
+          imgClassName="object-top [filter:grayscale(1)_contrast(1.04)_brightness(0.97)]"
         />
 
         <div className="relative z-[1] py-6 lg:pr-8 flex flex-col justify-center">

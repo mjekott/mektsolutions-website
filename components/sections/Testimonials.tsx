@@ -11,7 +11,7 @@ export function Testimonials() {
     <section className={`${CONTAINER} pt-[70px] pb-[30px]`}>
       <div className="text-center flex flex-col items-center">
         <Eyebrow center>Testimonials</Eyebrow>
-        <h2 className="text-[34px] md:text-[44px] tracking-[-0.04em] font-semibold mt-[22px]">What clients say</h2>
+        <h2 className="text-[34px] md:text-[44px] tracking-[-0.04em] font-semibold mt-[22px]">What our <span className="text-accent">clients say</span></h2>
       </div>
       <motion.div
         variants={revealContainer}

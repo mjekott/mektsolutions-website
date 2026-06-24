@@ -11,7 +11,7 @@ export function UiDesigns() {
       eyebrow="UI Designs"
       title={
         <>
-          Interface &amp; <span className="text-white/40">visual design</span>
+          Interface &amp; <span className="text-accent">visual design</span>
         </>
       }
       widths={uiDesigns.map((u) => u.width)}
