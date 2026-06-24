@@ -259,11 +259,7 @@ export const steps: Step[] = [
 export const founder = {
   name: "Mfonobong Ekott",
   photo: "/shots/founder.webp",
-  roles: [
-    { label: "CEO, MEKT Solutions", accent: true },
-    { label: "Full-Stack Engineer", accent: false },
-    { label: "7+ Years Experience", accent: false },
-  ],
+  roles: [{ label: "CEO, MEKT Solutions", accent: true }],
   bio: "Mfonobong John Ekott has spent 7+ years building and leading the engineering behind some of Africa's most demanding fintech and health products, from payment infrastructure to remote healthcare solutions. At MEKT, he brings that same commitment to excellence, practical leadership, and high quality execution to every team the company partners with.",
   ledProjects: ["TranzyPay", "Betaling", "RockBalm Health", "Nearpays"],
   linkedin: "https://www.linkedin.com/in/mjekott",

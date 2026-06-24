@@ -70,6 +70,8 @@ type HGalleryProps = {
   title: ReactNode;
   /** Card widths in px — used to compute per-card offsets for depth-dimming. */
   widths: number[];
+  /** Equalise card heights on desktop (align-items: stretch) instead of centering. */
+  stretch?: boolean;
   cards: (args: GalleryRenderArgs) => ReactNode;
 };
 
@@ -78,7 +80,7 @@ type HGalleryProps = {
  * drives the track sideways; on mobile it degrades to a native swipe scroller
  * with carousel dots.
  */
-export function HGallery({ id, eyebrow, title, widths, cards }: HGalleryProps) {
+export function HGallery({ id, eyebrow, title, widths, stretch = false, cards }: HGalleryProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -202,7 +204,7 @@ export function HGallery({ id, eyebrow, title, widths, cards }: HGalleryProps) {
           <motion.div
             ref={trackRef}
             style={enabled ? { x } : undefined}
-            className="flex gap-6 items-stretch md:items-center will-change-transform"
+            className={`flex gap-6 items-stretch will-change-transform ${stretch ? "md:items-stretch" : "md:items-center"}`}
           >
             {cards({ x, vw, enabled, offsets })}
           </motion.div>
